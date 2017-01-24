@@ -1,0 +1,54 @@
+﻿<terminal>
+aziz@PC-18:~$ sudo ifup eth0 
+Internet Systems Consortium DHCP Client 4.2.4 
+Copyright 2004-2012 Internet Systems Consortium. 
+All rights reserved. 
+For info, please visit https://www.isc.org/software/dhcp/ 
+
+Listening on LPF/eth0/00:24:1d:31:0d:46 
+Sending on   LPF/eth0/00:24:1d:31:0d:46 
+Sending on   Socket/fallback 
+DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 3 (xid=0xd1c60606) 
+DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 4 (xid=0xd1c60606) 
+DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 8 (xid=0xd1c60606) 
+DHCPREQUEST of 192.168.71.119 on eth0 to 255.255.255.255 port 67 (xid=0x606c6d1) 
+DHCPOFFER of 192.168.71.119 from 192.168.70.1 
+DHCPACK of 192.168.71.119 from 192.168.70.1 
+bound to 192.168.71.119 -- renewal in 266 seconds. 
+</>
+<backup type='file'>
+// This is the primary configuration file for the BIND DNS server named. 
+// 
+// Please read /usr/share/doc/bind9/README.Debian.gz for information on the  
+// structure of BIND configuration files in Debian, *BEFORE* you customize 
+// this configuration file. 
+// 
+// If you are just adding zones, please do that in /etc/bind/named.conf.local 
+
+include "/etc/bind/named.conf.options"; 
+include "/etc/bind/named.conf.local"; 
+include "/etc/bind/named.conf.default-zones"; 
+</>
+<issue name=”Print over LAN in Lab112”>
+<network>
+	<conf>
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+#WAN interface
+auto eth0
+iface eth0 inet dhcp
+#LAN interface
+auto eth1
+iface eth1 inet static
+address 10.0.0.38
+netmask 255.255.255.0
+broadcast 10.0.0.255
+network 10.0.0.0
+	</>
+</>	
+<technology>
+Windows Printer via SAMBA-> LAB112/LAB112ADMIN/HP%20LaserJet%202300%20Series%20PCL%206
+</>
+
+
