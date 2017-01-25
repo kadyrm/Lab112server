@@ -51,7 +51,7 @@ network 10.0.0.0
 Windows Printer via SAMBA-> LAB112/LAB112ADMIN/HP%20LaserJet%202300%20Series%20PCL%206
 </>
 
-<issue name= 'dns refused to  start'>
+<issue name= 'dns refused to  start' status='solved'>
 <terminal>
 	<input>
 		aziz@PC-18:/etc/init.d$ sudo /etc/init.d/named start
@@ -75,4 +75,8 @@ cups           networking         saned
 cups-browsed   ondemand           sendsigs
 dbus           pppd-dns           single
 	</>
+	<fix>
+		sudo /etc/init.d/bind9 start
+		 * Starting domain name service... bind9                    [ OK ]
+	</>	
 </>
