@@ -51,4 +51,28 @@ network 10.0.0.0
 Windows Printer via SAMBA-> LAB112/LAB112ADMIN/HP%20LaserJet%202300%20Series%20PCL%206
 </>
 
-
+<issue name= 'dns refused to  start'>
+<terminal>
+	<input>
+		aziz@PC-18:/etc/init.d$ sudo /etc/init.d/named start
+	</>
+	<output>
+		sudo: /etc/init.d/named: command not found
+	</>
+	<diagnostics>
+		aziz@PC-18:/etc/init.d$ ls
+acpid          dns-clean          procps      skeleton
+anacron        friendly-recovery  pulseaudio  speech-dispatcher
+apparmor       grub-common        rc          sudo
+apport         halt               rc.local    udev
+avahi-daemon   irqbalance         rcS         umountfs
+bind9          isc-dhcp-server    README      umountnfs.sh
+bluetooth      kerneloops         reboot      umountroot
+brltty         killprocs          resolvconf  unattended-upgrades
+console-setup  kmod               rsync       urandom
+cron           lightdm            rsyslog     x11-common
+cups           networking         saned
+cups-browsed   ondemand           sendsigs
+dbus           pppd-dns           single
+	</>
+</>
