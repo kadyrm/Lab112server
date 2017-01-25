@@ -1,0 +1,1 @@
+/**/__twttr.setFollowersCountAndFollowing([{"following":false,"id":"2323880252","screen_name":"howtoforgecom","name":"Howtoforge","protected":false,"followers_count":25498,"formatted_followers_count":"25.5K followers","age_gated":false}]);
