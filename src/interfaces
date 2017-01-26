@@ -1,0 +1,13 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+#WAN interface
+auto eth0
+iface eth0 inet dhcp
+#LAN interface
+auto eth1
+iface eth1 inet static
+        address         172.17.207.121
+        netmask         255.255.255.0
+        broadcast       172.17.207.255
+        network         172.17.207.0
