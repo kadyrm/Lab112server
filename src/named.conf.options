@@ -11,7 +11,7 @@ options {
 	// the all-0's placeholder.
 
 	 forwarders {
-	 	172.16.0.8; //very important, change this to your LOCAL ISP's DNS server(s).<my_note> I have my organization dns server ip, and only one</>
+	 	172.16.0.8; //very important, change this to your LOCAL ISP's DNS server(s).<my_note> This is my organization's dns server ip, and don't know ISP's one</>
 		//24.92.224.40;//may be to use 8.8.8.8 as a secondary dns adress??
 	 };
 
