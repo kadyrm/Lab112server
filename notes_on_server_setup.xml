@@ -80,3 +80,30 @@ dbus           pppd-dns           single
 		 * Starting domain name service... bind9                    [ OK ]
 	</>	
 </>
+<test id='1'>
+	<terminal type='snapshot'>
+		aziz@PC-18:~/Documents/server$ git commit -m 'Changed eth1 conf as in the manual to test the server'
+		[master 5622168] Changed eth1 conf as in the manual to test the server
+		 1 file changed, 3 insertions(+), 5 deletions(-)
+		aziz@PC-18:~/Documents/server$ sudo ifdown eth1
+		aziz@PC-18:~/Documents/server$ sudo ifup eth1
+		aziz@PC-18:~/Documents/server$ sudo iptables
+		iptables v1.4.21: no command specified
+		Try `iptables -h' or 'iptables --help' for more information.
+		aziz@PC-18:~/Documents/server$ sudo iptables -L
+		Chain INPUT (policy ACCEPT)
+		target     prot opt source               destination         
+
+		Chain FORWARD (policy ACCEPT)
+		target     prot opt source               destination         
+
+		Chain OUTPUT (policy ACCEPT)
+		target     prot opt source               destination         
+		aziz@PC-18:~/Documents/server$ sudo /etc/init.d/isc-dhcp-server start
+		 * Starting ISC DHCP server dhcpd                                        [ OK ] 
+		aziz@PC-18:~/Documents/server$ sudo /etc/init.d/bind9 start
+		 * Starting domain name service... bind9                                 [ OK ] 
+		aziz@PC-18:~/Documents/server$ 
+
+	</>
+</>
