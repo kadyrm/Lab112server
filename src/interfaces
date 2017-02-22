@@ -1,23 +1,24 @@
 # interfaces(5) file used by ifup(8) and ifdown(8)
+# Localhost
 auto lo
 iface lo inet loopback
-#WAN interface
+# WAN interface
 auto eth0
-iface eth0 inet dhcp
-#iface eth0 inet static
-#       address 10.0.0.38
-#        netmask 255.0.0.0
-#        broadcast 172.17.207.255
-#        network 10.0.0.0
-#	gateway 10.0.0.100
+#iface eth0 inet dhcp
+iface eth0 inet static
+	address 10.0.0.38
+	netmask 255.0.0.0
+	broadcast 10.255.255.255
+	network 10.0.0.0
+	gateway 10.0.0.100
 
 #LAN interface
 auto eth1
 iface eth1 inet static
-	address 10.0.0.100
-	netmask 255.255.255.0
-	broadcast 10.0.0.255
-	network 10.0.0.0	
+        address         172.17.207.121
+        netmask         255.255.255.0
+        broadcast       172.17.207.255
+        network         172.17.207.0	
 #used for WiFi AP configuration only
 #	address 192.168.1.2
 #	netmask 255.255.255.0
